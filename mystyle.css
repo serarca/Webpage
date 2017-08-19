@@ -1,0 +1,178 @@
+
+.container-fluid {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-nav > li > a {padding-top:10px !important; padding-bottom:10px !important; }
+.navbar-brand  {padding-top:10px !important; padding-bottom:10px !important; height:30px;}
+.navbar {min-height:10px !important; margin-bottom: 0;}
+
+
+.background-image {
+  width: 100%;
+  background-image: url("Butterfly4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 180px;
+}
+
+.header-photo {
+  position: relative;
+  left: 0%;
+  height:220px;
+  top: 0px;
+}
+
+.content {
+  position:absolute;
+  top: 75px;
+}
+
+
+.circled {
+  border: 3px solid black;
+  float: left;
+  max-width:100%;
+  max-height:100%;
+}
+
+.img-timeline {
+  border: 3px solid black;
+  float: left;
+}
+
+.name {
+  position:relative;
+  top:147px;
+  left:-65px;
+  font-family:"Courier";
+  color:rgb(50,50,50) ;
+}
+
+@media screen and (max-width: 991px) {
+  .name {
+    top:0px;
+    left:0px;
+  }
+}
+
+.name > h1 {
+    font-weight:bolder;
+    line-height: 33px;
+    font-size:3em;
+    margin: 1px;
+    padding: 1px;
+}
+
+.name > h2 {
+    font-size:1.8em;
+    line-height: 25px;
+    margin: 1px;
+    padding: 1px;
+}
+
+.name > h3 {
+    font-size:1.5em;
+    line-height: 30px;
+}
+
+.where{
+  text-transform: capitalize;
+  font-size:2em;
+  font-weight:bold;
+
+}
+
+.what{
+  font-size:1.5em;
+}
+
+.when{
+  color:#C41E3A;
+  font-size:1.5em;
+  font-weight:bold;
+
+}
+
+.experiences{
+  color:rgb(80,80,80) ;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.experiences p{
+  max-width: 700px;
+
+}
+
+.no-space{
+  margin-top: 1px;
+  margin-bottom: 0px ;
+  padding-top: 0px;  
+  padding-bottom: 0px ;  
+}
+
+.margin-where{
+  margin-top: 1px;
+  margin-bottom: 0px ;
+  padding-top: 0px;  
+  padding-bottom: 0px ;  
+}
+
+.which{
+  margin-top: 0px;
+  line-height: 20px;
+}
+.description{
+   margin-top: 0px;
+}
+
+
+
+
+ul{
+  list-style-type: none;
+}
+
+ul.experiences li {
+    position:relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+    /* use padding-bottom instead of margin-bottom.*/ 
+    margin-bottom: 0; /* This overrides previously specified margin-bottom */
+    padding-bottom: 1em;
+    font-family: "Raleway";
+}
+
+ul.experiences li:after {
+    /* bullets */
+    width:14px;
+    height:14px;
+    background: rgb(80,80,80);
+    content: "";
+    position: absolute;
+    left: -20px; /*adjust manually*/
+    top: 30px;
+    border-radius: 14px;
+    display:block;
+}
+
+ul.experiences li:before {
+    /* lines */
+    content:"";
+    position: absolute;
+    left: -15px; /* adjust manually */
+    border-left: 4px solid rgb(80,80,80);
+    height: 110%;
+    width: 1px;
+}
+
+ul.experiences li:first-child:before {
+   /* first li's line */
+   top: 0px; /* moves the line down so that it disappears under the bullet. Adjust manually */
+}
+
+ul.experiences li:last-child:before {
+    /* last li's line */
+   height: 30px; /* shorten the line so it goes only up to the bullet. Is equal to first-child:before's top */
+}
+
